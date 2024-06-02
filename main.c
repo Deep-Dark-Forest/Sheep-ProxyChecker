@@ -71,6 +71,8 @@ void createConfig() {
 
 // 检查代理列表中的代理
 void checkProxies() {
+    system("chcp 936 > nul");
+
     struct Config config = {};
     FILE* configFile;
     FILE* proxyListFile;
