@@ -3,11 +3,11 @@
 #include <string.h>
 #include <windows.h>
 
-constexpr auto MAX_SITE_LENGTH = 50;
-constexpr auto MAX_PROXYTYPE_LENGTH = 10;
+const int MAX_SITE_LENGTH = 50;
+const int MAX_PROXYTYPE_LENGTH = 10;
 // 定义配置和代理列表文件的名称
-constexpr auto CONFIG_FILE = "config.txt";
-constexpr auto PROXY_LIST_FILE = "proxylist.txt";
+auto CONFIG_FILE = "config.txt";
+auto PROXY_LIST_FILE = "proxylist.txt";
 
 // 用于存储配置的结构体
 struct Config {
@@ -68,7 +68,7 @@ void createConfig() {
 
 // 检查代理列表中的代理
 void checkProxies() {
-    struct Config config {};
+    struct Config config = {};
     FILE* configFile;
     FILE* proxyListFile;
     char proxy[MAX_SITE_LENGTH];
