@@ -4,12 +4,10 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install GCC
-      run: sudo apt-get install gcc
     - name: Compile C code
       run: gcc -o build Sheep-ProxyChecker/main.c
     - name: Run the program
