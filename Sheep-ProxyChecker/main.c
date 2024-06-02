@@ -3,8 +3,9 @@
 #include <string.h>
 #include <windows.h>
 
-const int MAX_SITE_LENGTH = 50;
-const int MAX_PROXYTYPE_LENGTH = 10;
+#define MAX_SITE_LENGTH 50
+#define MAX_PROXYTYPE_LENGTH 10
+
 // 定义配置和代理列表文件的名称
 char CONFIG_FILE[] = "config.txt";
 char PROXY_LIST_FILE[] = "proxylist.txt";
