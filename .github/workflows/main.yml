@@ -8,10 +8,12 @@ jobs:
 
     steps:
     - name: Clone repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
+
     - name: Compile C code
-      run: gcc -o build Sheep-ProxyChecker/main.c
+      run: gcc -o build main.c
+
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
-        path: Sheep-ProxyChecker/build
+        path: build.exe
