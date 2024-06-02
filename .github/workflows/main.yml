@@ -11,6 +11,6 @@ jobs:
     - name: Install GCC
       run: sudo apt-get install gcc
     - name: Compile C code
-      run: gcc -o build main.c
+      run: gcc -o build Sheep-ProxyChecker/main.c
     - name: Run the program
       run: ./build
