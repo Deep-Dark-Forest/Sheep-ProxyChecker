@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     system("chcp 65001 > nul");
 
     if (argc < 2) {
-        printf("使用方法: %s <命令>\n命令:\n start - 生成配置文件\n check - 检查代理\n", argv[0]);
+        printf("使用方法: %s <命令>\n命令:\n start - 生成必要文件（首次运行必须输入此命令）\n check - 检查代理\n", argv[0]);
         return 1;
     }
 
