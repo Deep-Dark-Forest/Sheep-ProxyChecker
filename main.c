@@ -63,6 +63,8 @@ void createConfig() {
         exit(1);
     }
     fprintf(proxyListFile, "www.google.com\n");
+    fprintf(proxyListFile, "www.youtube.com\n");
+    fprintf(proxyListFile, "www.chatgpt.com\n");
     fclose(proxyListFile);
 
     printf("配置文件和代理列表文件已创建。\n");
