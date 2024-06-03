@@ -13,7 +13,6 @@ char PROXY_LIST_FILE[] = "proxylist.txt";
 // 用于存储配置的结构体
 struct Config {
     int timeout;
-    char testsite[MAX_SITE_LENGTH];
     char proxytype[MAX_PROXYTYPE_LENGTH];
 };
 
@@ -54,7 +53,6 @@ void createConfig() {
         exit(1);
     }
     fprintf(configFile, "timeout = 5000ms\n");
-    fprintf(configFile, "testsite = https://www.google.com\n");
     fprintf(configFile, "proxytype = http\n");
     fclose(configFile);
 
@@ -64,6 +62,9 @@ void createConfig() {
         perror("无法创建代理列表文件");
         exit(1);
     }
+    fprintf(proxyListFile, "www.google.com\n");
+    fprintf(proxyListFile, "www.youtube.com\n");
+    fprintf(proxyListFile, "www.chatgpt.com\n");
     fclose(proxyListFile);
 
     printf("配置文件和代理列表文件已创建。\n");
@@ -87,7 +88,6 @@ void checkProxies() {
         exit(1);
     }
     fscanf_s(configFile, "timeout = %dms\n", &config.timeout);
-    fscanf_s(configFile, "testsite = %s\n", &config.testsite, MAX_SITE_LENGTH);
     fscanf_s(configFile, "proxytype = %s\n", &config.proxytype, MAX_PROXYTYPE_LENGTH);
     fclose(configFile);
 
