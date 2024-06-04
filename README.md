@@ -13,8 +13,8 @@ gcc -o build ./main.c
 ## 使用
 
 ```bash
-./build.exe start
-./build.exe check
+./Sheep-ProxyChecker.exe start
+./Sheep-ProxyChecker.exe check
 ```
 
 ## 参数
