@@ -2,7 +2,10 @@
 
 ## 介绍
 
-Sheep-ProxyChecker 是一个基于 C 的代理检测工具。
+Sheep-ProxyChecker 是一个基于 C 的代理检测工具
+
+> [!TIP]
+> 本程序仅支持 Windows 系统
 
 ## 编译
 
@@ -13,8 +16,8 @@ gcc -o build ./main.c
 ## 使用
 
 ```bash
-./Sheep-ProxyChecker.exe start
-./Sheep-ProxyChecker.exe check
+./build.exe start
+./build.exe check
 ```
 
 ## 参数

@@ -21,7 +21,7 @@ void checkProxies();
 void setColor(int color);
 
 int main(int argc, char* argv[]) {
-    system("chcp 65001 > nul");
+    system("chcp 65001 > nul"); // 更换编码
 
     if (argc < 2) {
         printf("使用方法: %s <命令>\n命令:\n start - 生成必要文件（首次运行必须输入此命令）\n check - 检查代理\n", argv[0]);
@@ -72,7 +72,7 @@ void createConfig() {
 
 // 检查代理列表中的代理
 void checkProxies() {
-    system("chcp 936 > nul");
+    system("chcp 936 > nul"); // 更换编码
 
     struct Config config = {};
     FILE* configFile;
