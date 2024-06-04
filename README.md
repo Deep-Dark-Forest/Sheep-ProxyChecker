@@ -4,7 +4,8 @@
 
 Sheep-ProxyChecker 是一个基于 C 的代理检测工具
 
-**注意：本程序只支持 Windows 系统**
+> [!TIP]
+> 本程序仅支持 Windows 系统
 
 ## 编译
 
