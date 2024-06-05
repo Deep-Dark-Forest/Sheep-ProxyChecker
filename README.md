@@ -10,14 +10,14 @@ Sheep-ProxyChecker 是一个基于 C 的代理检测工具
 ## 编译
 
 ```bash
-gcc -o build ./main.c
+gcc -o Sheep-ProxyChecker ./main.c
 ```
 
 ## 使用
 
 ```bash
-./build.exe start
-./build.exe check
+./Sheep-ProxyChecker.exe start
+./Sheep-ProxyChecker.exe check
 ```
 
 ## 参数

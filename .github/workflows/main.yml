@@ -11,10 +11,10 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Compile C code
-      run: gcc -o build main.c
+      run: gcc -o Sheep-ProxyChecker main.c
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        path: build.exe
+        path: Sheep-ProxyChecker.exe
         if-no-files-found: error
