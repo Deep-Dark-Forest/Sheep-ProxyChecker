@@ -53,7 +53,6 @@ void createConfig() {
         exit(1);
     }
     fprintf(configFile, "timeout = 5000ms\n");
-    fprintf(configFile, "proxytype = http\n");
     fclose(configFile);
 
     // 创建proxylist.txt
@@ -88,7 +87,6 @@ void checkProxies() {
         exit(1);
     }
     fscanf_s(configFile, "timeout = %dms\n", &config.timeout);
-    fscanf_s(configFile, "proxytype = %s\n", &config.proxytype, MAX_PROXYTYPE_LENGTH);
     fclose(configFile);
 
     // 打开代理列表文件
