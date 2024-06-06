@@ -1,4 +1,5 @@
 # Sheep-ProxyChecker
+[![C Build](https://github.com/Deep-Dark-Forest/Sheep-ProxyChecker/actions/workflows/main.yml/badge.svg)](https://github.com/Deep-Dark-Forest/Sheep-ProxyChecker/actions/workflows/main.yml)
 
 ## 介绍
 
