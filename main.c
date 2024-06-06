@@ -13,7 +13,7 @@ char PROXY_LIST_FILE[] = "proxylist.txt";
 // 用于存储配置的结构体
 struct Config {
     int timeout;
-    char proxytype[MAX_PROXYTYPE_LENGTH];
+    int pingcount;
 };
 
 void createConfig();
@@ -52,7 +52,8 @@ void createConfig() {
         perror("无法创建配置文件");
         exit(1);
     }
-    fprintf(configFile, "timeout = 5000ms\n");
+    fprintf(configFile, "timeout = 1000ms\n");
+    fprintf(configFile, "pingcount = 1\n");
     fclose(configFile);
 
     // 创建proxylist.txt
@@ -87,6 +88,7 @@ void checkProxies() {
         exit(1);
     }
     fscanf_s(configFile, "timeout = %dms\n", &config.timeout);
+    fscanf_s(configFile, "pingcount = %d\n", &config.pingcount);
     fclose(configFile);
 
     // 打开代理列表文件
@@ -98,7 +100,7 @@ void checkProxies() {
     // 逐行读取代理并检查
     while (fgets(proxy, MAX_SITE_LENGTH, proxyListFile) != NULL) {
         // 构建ping命令
-        snprintf(command, sizeof(command), "ping -n 1 -w %d %s", config.timeout, proxy);
+        snprintf(command, sizeof(command), "ping -n %d -w %d %s", config.pingcount, config.timeout, proxy);
         // 执行ping命令
         result = system(command);
         // 根据结果设置颜色
